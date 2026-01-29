@@ -1,4 +1,4 @@
-function kirimData() {
+function hasil() {
   const data = {
     email: document.getElementById("email").value,
     password: document.getElementById("password").value,
@@ -38,3 +38,4 @@ function hasil() {
     })
   });
 }
+
