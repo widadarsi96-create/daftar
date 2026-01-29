@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Registrasi</title>
+</head>
+<body>
+    <div class="masuk-regist">
+        <h1>Registrasi</h1>
+        <div class="form-input">
+            <form id="registForm">
+                <!-- Email -->
+                <label for="email">Email:</label> 
+                <input type="email" id="email" name="email" placeholder="Ketik..." required><br><br>
+
+                <!-- Password -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Ketik..." minlength="6" maxlength="20" required><br><br>
+
+                <!-- Nama -->
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required placeholder="Ketik..."><br><br>
+
+                <!-- Umur -->
+                <label for="umur">Umur:</label>
+                <input type="number" id="umur" name="umur" required><br><br>
+
+                <!-- Gender -->
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="Laki-Laki" required> Laki-laki
+                <input type="radio" name="gender" value="Perempuan" required> Perempuan 
+                <input type="radio" name="gender" value="Waria" required> Waria <br><br>
+
+                <!-- Tempat & Tanggal Lahir -->
+                <label for="ttl">Tempat:</label>
+                <select id="ttl" name="ttl" required>
+                    <option value="" disabled selected>Kota / Kabupaten</option>
+                    <option value="Pekalongan">Pekalongan</option>
+                    <option value="Pemalang">Pemalang</option>
+                    <option value="Tegal">Tegal</option>
+                </select>
+
+                <label for="tanggalahir">Tanggal Lahir:</label>
+                <input type="date" id="tanggalahir" name="tanggal-lahir" required><br><br>
+
+                <!-- Sekolah -->
+                <label for="school">Asal Sekolah:</label>
+                <select id="school" name="sekolah" required>
+                    <option value="" disabled selected>Nama Sekolah</option>
+                    <optgroup label="SMK">
+                        <option value="SMK SATYA PRAJA 1 PETARUKAN">SMK SATYA PRAJA 1 PETARUKAN</option>
+                        <option value="SMK SATYA PRAJA 2 PETARUKAN">SMK SATYA PRAJA 2 PETARUKAN</option>
+                        <option value="SMK SATYA PRAJA 3 PETARUKAN">SMK SATYA PRAJA 3 PETARUKAN</option>
+                    </optgroup>
+                    <optgroup label="SMP">
+                        <option value="SMP NEGRI 1 PETARUKAN">SMP NEGRI 1 PETARUKAN</option>
+                        <option value="SMP NEGRI 2 PETARUKAN">SMP NEGRI 2 PETARUKAN</option>
+                        <option value="SMP NEGRI 3 PETARUKAN">SMP NEGRI 3 PETARUKAN</option>
+                    </optgroup>
+                </select><br><br>
+
+                <!-- Universitas -->
+                <label for="universitas">Tujuan Universitas:</label>
+                <input id="universitas" name="universitas" list="kampus">
+                <datalist id="kampus">
+                    <option value="Universitas Gajah Mada">
+                    <option value="Universitas Padjajaran">
+                    <option value="Institut Teknologi Bandung">
+                    <option value="Universitas Diponegoro">
+                </datalist><br><br>
+
+                <!-- Alasan -->
+                <label for="alasan">Kenapa mengikuti program ini?</label><br>
+                <textarea id="alasan" name="alasan" rows="3" cols="30" placeholder="Ketik..."></textarea><br><br>
+
+                <button type="button" onclick="kirimData()">Daftar</button><br><br>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
